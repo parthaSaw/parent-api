@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var fs = require('fs')
 var data = require('./data.json')
 
-console.log('OK')
+console.log('PERFECT')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
