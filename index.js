@@ -5,7 +5,9 @@ var bodyParser = require('body-parser');
 var fs = require('fs')
 var data = require('./data.json')
 
-console.log('PERFECT')
+app.get('/health',(req,res)=>{
+    res.send({"msg":"OK"})
+})
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
