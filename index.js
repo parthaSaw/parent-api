@@ -3,6 +3,7 @@ var app = express();
 var router = require('./routers/router')
 var bodyParser = require('body-parser');
 var fs = require('fs')
+var data = require('./data.json')  
 
 app.get('/health',(req,res)=>{
     res.send({"msg":"OK"})
@@ -15,8 +16,12 @@ app.get('/', (req, res) => {
     res.send("Simple API Gateway")
 })
 
+function loadData(){
+    data = require('./data.json')
+}
+
 app.post('/login', (req,res)=>{  
-    var data = require('./data.json')  
+    this.loadData()
     uname = req.body.uname
     pass = req.body.pass
     isTransaction = req.body.isTransaction
