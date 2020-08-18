@@ -16,12 +16,8 @@ app.get('/', (req, res) => {
     res.send("Simple API Gateway")
 })
 
-function loadData(){
-    data = require('./data.json')
-}
-
 app.post('/login', (req,res)=>{  
-    this.loadData()
+    data = require('./data.json')
     uname = req.body.uname
     pass = req.body.pass
     isTransaction = req.body.isTransaction
