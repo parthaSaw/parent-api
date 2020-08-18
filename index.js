@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/login', (req,res)=>{  
-    var data = require('./data.json') 
+    var data = require('./data.json')  
     uname = req.body.uname
     pass = req.body.pass
     isTransaction = req.body.isTransaction
